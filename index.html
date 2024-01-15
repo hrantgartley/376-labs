@@ -1,73 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>APLHA LAB CIS-376</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+    <head>
+        <title>APLHA LAB CIS-376</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Margarine&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="places.js"></script>
-    <style>
-      body {
-        background-color: firebrick;
-        color: white;
-        font-family: "Agbalumo", system-ui;
-        font-weight: 400;
-        font-style: normal;
-      }
+        <link
+            href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Margarine&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="places.js"></script>
+        <style>
+            body {
+                background-color: firebrick;
+                color: white;
+                font-family: "Agbalumo", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
 
-      .container {
-        margin-top: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="offset-md-2 col-md-8 mx-auto text-center">
-          <h1>Welcome</h1>
-          <h2>What's your name.</h2>
-          <input type="text" class="form-control" id="fname" name="fname" />
-          <br /><br />
-          <button class="btn btn-primary" id="submit-btn" type="button">
-            Click me!
-          </button>
-          <p id="something" style="display: none"></p>
+            .container {
+                margin-top: 50px;
+            }
+            p {
+                padding-top: 2em;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-2 col-md-8 mx-auto text-center">
+                    <h1>Welcome</h1>
+                    <h2>What's your name.</h2>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="fname"
+                        name="fname"
+                    />
+                    <br /><br />
+                    <button
+                        class="btn btn-primary"
+                        id="submit-btn"
+                        type="button"
+                    >
+                        Click me!
+                    </button>
+                    <p id="something" style="display: none"></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <script>
-      $(document).ready(function () {
-        $("#submit-btn").click(function () {
-          submitForm();
-        });
+        <script>
+            $(document).ready(function () {
+                $("#submit-btn").click(function () {
+                    submitForm()
+                })
 
-        $("#fname").keypress(function (e) {
-          if (e.which === 13) {
-            submitForm();
-          }
-        });
+                $("#fname").keypress(function (e) {
+                    if (e.which === 13) {
+                        submitForm()
+                    }
+                })
 
-        function submitForm() {
-          const randomPlace = places[Math.floor(Math.random() * places.length)];
-          let fname = $("#fname").val();
-          let greeting =
-            "Hello " + fname + "! What's up! Welcome to " + randomPlace;
+                function submitForm() {
+                    const randomPlace =
+                        places[Math.floor(Math.random() * places.length)]
+                    let fname = $("#fname").val()
+                    let greeting =
+                        "Hello " +
+                        fname +
+                        "! What's up! Welcome to " +
+                        randomPlace
 
-          $("#something").text(greeting).fadeIn(2000).fadeOut(5000);
-        }
-      });
-    </script>
-  </body>
+                    $("#something").text(greeting).fadeIn(2000).fadeOut(10000)
+                }
+            })
+        </script>
+    </body>
 </html>
