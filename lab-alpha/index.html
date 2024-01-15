@@ -8,7 +8,6 @@
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         />
-
         <link
             href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Margarine&display=swap"
             rel="stylesheet"
@@ -25,7 +24,6 @@
                 font-weight: 400;
                 font-style: normal;
             }
-
             .container {
                 margin-top: 50px;
             }
@@ -35,7 +33,6 @@
             }
         </style>
     </head>
-
     <body>
         <div class="container">
             <div class="row">
@@ -53,14 +50,14 @@
                         class="btn btn-primary"
                         id="submit-btn"
                         type="button"
+                        ondblclick="resetForm()"
                     >
-                        Click me!
+                        Click me! (double click to reset)
                     </button>
                     <p id="something" style="display: none"></p>
                 </div>
             </div>
         </div>
-
         <script src="main.js"></script>
     </body>
 </html>

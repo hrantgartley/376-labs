@@ -25,4 +25,7 @@ const places = [
     "Cairo",
     "Singapore",
     "Dublin",
+    "Hong Kong",
+    "Vienna",
+    "Moscow",
 ]
