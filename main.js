@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
 /* global $ */
-$(document).ready(function () {
-    $("#submit-btn").click(function () {
+$(function () {
+    $("#submit-btn").on("click", function () {
         submitForm()
     })
 
-    $("#fname").keypress(function (e) {
+    $("#fname").on("keydown", function (e) {
         if (e.which === 13) {
             submitForm()
         }
