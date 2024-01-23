@@ -23,7 +23,7 @@ $(function () {
         let greeting =
             "Hello " + fname + "! What's up! Welcome to " + randomPlace
 
-        $("#something").text(greeting).fadeIn(2000)
+        $("#something").text(greeting).fadeIn(2000).replaceWith("")
     }
 })
 
