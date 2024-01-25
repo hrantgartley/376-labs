@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-/* global $ */
 $(function () {
     $("#submit-btn").on("click", function () {
         submitForm()
@@ -29,7 +28,7 @@ $(function () {
         let greeting =
             "Hello " + fname + "! What's up! Welcome to " + randomPlace
 
-        $("#something").text(greeting).fadeIn(2000)
+        $("#something").text(greeting).fadeIn(2000).replaceWith("")
     }
 })
 
