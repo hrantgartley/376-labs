@@ -1,0 +1,24 @@
+.charlie-card {
+    width: 18rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#charlie-link {
+    margin-top: 10px;
+}
+
+#delta-card-css {
+    width: 18rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#shadow-stuff {
+    width: 18rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
