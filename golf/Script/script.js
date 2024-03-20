@@ -19,6 +19,7 @@ $(function () {
                         <p class="text-white">Created by: ${innerItem.author}</p>
                         <br>
                     </div>
+
                 </div>`;
 
                 console.log("Generated HTML:", el); // Check generated HTML
