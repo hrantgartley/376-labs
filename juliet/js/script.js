@@ -32,6 +32,7 @@ $("#submit").on("click", function () {
 });
 
 $("#user-input").on("input", function () {
+    printResult();
     convertToNato();
 });
 
@@ -48,17 +49,26 @@ $("#clear").on("click", function () {
 /**
  * Converts user input to NATO phonetic alphabet codes.
  * @function convertToNato
- * @params {string} input - User input.
+ * @param {string} input - User input.
  * @returns {string} - NATO phonetic alphabet codes.
  */
-function convertToNato() {
-    let input = $("#user-input").val().toLowerCase();
-    let inputArray = input.split("");
+function convertToNato(input) {
+    let inputArray = input.toLowerCase().split("");
     let natoCodes = inputArray.map((letter) => {
         return nato[letter] || letter;
     });
+    return natoCodes.join(" ");
+}
+
+/**
+ * Prints the result of converting input to NATO phonetic alphabet codes.
+ * @function printResult
+ */
+function printResult() {
+    let input = $("#user-input").val();
+    let natoResult = convertToNato(input);
     $("#output")
-        .text("Result: " + natoCodes.join(" "))
+        .text("Result: " + natoResult)
         .fadeIn(1000);
 }
 
@@ -68,7 +78,9 @@ function convertToNato() {
  */
 function addToList() {
     let inputText = $("#user-input").val();
-    let listItem = $("<li>").addClass("list-group-item").text(inputText);
+    let listItem = $("<li>")
+        .addClass("list-group-item")
+        .append(inputText, "\n", "Nato: ", convertToNato(inputText));
     $("#previous-entries").append(listItem);
     clearBox();
 }
